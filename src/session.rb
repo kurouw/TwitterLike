@@ -1,4 +1,5 @@
 class Session
+  attr_accessor :db
   def initialize(db = Sequel.sqlite('app.sqlite3'))
     db.create_table? :session do
       primary_key :id
